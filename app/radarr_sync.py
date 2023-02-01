@@ -46,6 +46,8 @@ class radarrSync():
                 self.radarrdest_token = self.config['RADARR_DEST']['TOKEN']
                 self.radarrdest_rootfolder = \
                     int(self.config['RADARR_DEST']['ROOTFOLDER'])
+                self.radarrdest_qualityprofile = \
+                    int(self.config['RADARR_DEST']['QUALITYPROFILE'])
 
                 # SYNC
                 self.dry_run = True if (
@@ -172,7 +174,7 @@ class radarrSync():
                         if not self.dry_run:
                             dest.add(
                                 self.radarrdest_rootfolder,
-                                1,
+                                self.radarrdest_qualityprofile,
                                 True,
                                 True,
                                 "released",
