@@ -48,6 +48,12 @@ class radarrSync():
                     int(self.config['RADARR_DEST']['ROOTFOLDER'])
                 self.radarrdest_qualityprofile = \
                     int(self.config['RADARR_DEST']['QUALITYPROFILE'])
+                self.radarrdest_monitor = True if (
+                    self.config['RADARR_DEST']['MONITOR'] == "ON") else False
+                self.radarrdest_search = True if (
+                    self.config['RADARR_DEST']['SEARCH'] == "ON") else False
+                self.radarrdest_minimum_availability = \
+                    self.config['RADARR_DEST']['MINIMUM_AVAILABILITY']
 
                 # SYNC
                 self.dry_run = True if (
@@ -175,9 +181,9 @@ class radarrSync():
                             dest.add(
                                 self.radarrdest_rootfolder,
                                 self.radarrdest_qualityprofile,
-                                True,
-                                True,
-                                "released",
+                                self.radarrdest_monitor,
+                                self.radarrdest_search,
+                                self.radarrdest_minimum_availability,
                                 source.tags
                             )
 
