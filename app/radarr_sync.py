@@ -169,7 +169,7 @@ class radarrSync():
                     try:
                         if not self.dry_run:
                             dest.add(
-                                2,
+                                8,
                                 1,
                                 True,
                                 True,
