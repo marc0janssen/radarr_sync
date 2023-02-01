@@ -44,6 +44,8 @@ class radarrSync():
                 # RADARR_DESTINATION
                 self.radarrdest_url = self.config['RADARR_DEST']['URL']
                 self.radarrdest_token = self.config['RADARR_DEST']['TOKEN']
+                self.radarrdest_rootfolder = \
+                    int(self.config['RADARR_DEST']['ROOTFOLDER'])
 
                 # SYNC
                 self.dry_run = True if (
@@ -169,7 +171,7 @@ class radarrSync():
                     try:
                         if not self.dry_run:
                             dest.add(
-                                8,
+                                self.radarrdest_rootfolder,
                                 1,
                                 True,
                                 True,
