@@ -186,6 +186,12 @@ class radarrSync():
                                 self.radarrdest_minimum_availability,
                                 source.tags
                             )
+                    except exceptions.Invalid as e:
+                        logging.warning(
+                                    f"{e}"
+                                    f""
+                                )
+                        sys.exit()
 
                     except exceptions.Exists:
                         logging.warning(
