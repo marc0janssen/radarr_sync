@@ -187,9 +187,9 @@ class radarrSync():
                                 source.tags
                             )
                     except exceptions.Invalid as e:
-                        logging.warning(
-                                    f"{e}"
-                                    f""
+                        logging.error(
+                                    f"{e} "
+                                    f"Exiting script with an error."
                                 )
                         sys.exit()
 
