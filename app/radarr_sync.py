@@ -244,7 +244,7 @@ class radarrSync():
 
                     except exceptions.NotFound:
                         logging.warning(
-                                    f"Movie {dest.title}({dest.year})"
+                                    f"Movie {destination.title}({destination.year})"
                                     f" doesn't exists on destination.")
             else:
                 boolFound = False
