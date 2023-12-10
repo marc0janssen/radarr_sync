@@ -176,8 +176,6 @@ class radarrSync():
                     self.writeLog(False, f"{txtMsg}\n")
                     logging.info(txtMsg)
 
-                    print(self.radarrdest_rootfolder)
-
                     try:
                         if not self.dry_run:
                             dest.add(
