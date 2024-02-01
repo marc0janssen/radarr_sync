@@ -172,7 +172,7 @@ class radarrSync():
                 if not dest.id:
                     boolSynced = True
                     txtMsg = (
-                        f"Syncing the movie: {source.title}({source.year})")
+                        f"Sync - Syncing the movie: {source.title}({source.year})")
                     self.writeLog(False, f"{txtMsg}\n")
                     logging.info(txtMsg)
 
@@ -228,7 +228,7 @@ class radarrSync():
                 if not source.id:
                     boolSynced = True
                     txtMsg = (
-                        f"Deleting the movie: {source.title}({source.year})")
+                        f"Sync - Deleting the movie: {source.title}({source.year})")
                     self.writeLog(False, f"{txtMsg}\n")
                     logging.info(txtMsg)
 
