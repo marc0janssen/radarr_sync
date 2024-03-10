@@ -21,7 +21,7 @@ class radarrSync():
 
         config_dir = "/config/"
         app_dir = "/app/"
-        log_dir = "/logging/"
+        log_dir = "/logging/sync/"
 
         self.config_file = "radarr_sync.ini"
         self.exampleconfigfile = "radarr_sync.ini.example"
