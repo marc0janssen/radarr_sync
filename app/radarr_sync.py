@@ -7,6 +7,7 @@ import logging
 import sys
 import configparser
 import shutil
+import time
 
 from datetime import datetime
 from arrapi import RadarrAPI, exceptions
@@ -207,6 +208,8 @@ class radarrSync():
                                     f" already exists on destination.")
             else:
                 boolFound = False
+
+            time.sleep(0.5)
 
         self.sourceMedia = self.radarrsourceNode.all_movies()
         self.destMedia = self.radarrdestNode.all_movies()
