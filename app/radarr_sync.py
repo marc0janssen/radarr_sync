@@ -209,7 +209,7 @@ class radarrSync():
             else:
                 boolFound = False
 
-            time.sleep(0.5)
+            time.sleep(0.2)
 
         self.sourceMedia = self.radarrsourceNode.all_movies()
         self.destMedia = self.radarrdestNode.all_movies()
