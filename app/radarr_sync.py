@@ -125,8 +125,11 @@ class radarrSync():
             logging.error(
                 f"Can't connect to Radarr source {e}"
             )
-
             sys.exit()
+        except Exception as e:
+            logging.error(
+                f"Unexpected error connecting Radarr source: {e}")
+            sys.exit(1)
 
         # Connect to Radarr Destination
         try:
@@ -136,8 +139,11 @@ class radarrSync():
             logging.error(
                 f"Can't connect to Radarr destination {e}"
             )
-
             sys.exit()
+        except Exception as e:
+            logging.error(
+                f"Unexpected error connecting Radarr destination: {e}")
+            sys.exit(1)
 
         if self.dry_run:
             logging.info(
