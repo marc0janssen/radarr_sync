@@ -112,9 +112,9 @@ class radarrSync():
             logging.info(txtMsg)
 
         if not self.enabled_run:
-            txtMsg = "Sync - Radarr sync disabled"
-            logging.info(txtMsg)
-            self.writeLog(False, f"{txtMsg}\n")
+            # txtMsg = "Sync - Radarr sync disabled"
+            # logging.info(txtMsg)
+            # self.writeLog(False, f"{txtMsg}\n")
             sys.exit()
 
         # Connect to Radarr Source
